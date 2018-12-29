@@ -4,39 +4,7 @@ ThinkPHP 5.1 —— restfulapi
 
 ## 简介
 
--  router.php中定义了restful资源路由，具体请查看代码。
-
-## 安装
-
-使用composer安装
-
-~~~
-composer create-project topthink/think tp
-~~~
-
-启动服务
-
-~~~
-cd tp
-php think run
-~~~
-
-然后就可以在浏览器中访问
-
-~~~
-http://localhost:8000
-~~~
-
-更新框架
-~~~
-composer update topthink/framework
-~~~
-
-
-## 在线手册
-
-+ [完全开发手册](https://www.kancloud.cn/manual/thinkphp5_1/content)
-+ [升级指导](https://www.kancloud.cn/manual/thinkphp5_1/354155) 
+-  简单的restful风格，有好的改进建议请联系我，邮箱mail@lvyabin.com
 
 ## 目录结构
 
@@ -98,16 +66,23 @@ www  WEB部署目录（或者子目录）
 │
 ├─extend                        扩展类库目录
 │  ├─controller
-│  ├─  ├─BasicApi.php           授权基类
+│  ├─  └─BasicApi.php           授权基类
+│  ├─
 │  ├─Exception  
-│  ├─  ├─Exception.php          异常处理
+│  ├─  └─Exception.php          异常处理
+│  ├─
 │  ├─service
 │  ├─  ├─HttpService.php        HTTP请求处理
-│  ├─  ├─LogService.php         LOG日志处理
+│  ├─  └─LogService.php         LOG日志处理
+│  ├─
+│  ├─traits
+│  ├─  └─Send.php               返回格式 数据返回类,可以直接接口返回code message data格式的数据，并且格式化为字符串
+│  └─util                       封装工具类目
+│
 ├─runtime                       应用的运行时目录（可写，可定制）
 ├─vendor                        第三方类库目录（Composer依赖库）
-├─build.php                     自动生成定义文件（参考）
 ├─.env                          环境变量定义文件
+├─build.php                     自动生成定义文件（参考）
 ├─composer.json                 composer 定义文件
 ├─LICENSE.txt                   授权说明文件
 ├─README.md                     README 文件
